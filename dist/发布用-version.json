@@ -1,0 +1,17 @@
+{
+  "versionCode": 16,
+  "versionName": "0.2.1-alpha.1",
+  "url": "https://github.com/CityNanFlower/whale-release/releases/download/v0.2.1-alpha.1/whale.apk",
+  "sha256": "fb0b7f94e932399b9dbff4c77e6600397415229ae2372d66764d74fa85c2c733",
+  "notes": "本次更新：角色卡新增「形态」——陪伴 / 多线 / 玩法 / 工具，同一个 App 里既能常规角色扮演，也能玩有规则的互动玩法（二十问、海龟汤那样），还能把卡当加工工具用（给素材、出成品）；语音补齐（声音类型胶囊、复刻音色可在应用内直接录、角色专属音色支持混合音色与试听）；发现页重做（四个主题 15 张精选卡、按类型挑卡、图换成动漫画风）；导入酒馆系卡更保真（字段不再揉成一段、卡图立绘当头像）；修掉「开了混合音色会念两遍」「背景音乐音量拖了不生效」。",
+  "windows": {
+    "versionCode": 7,
+    "versionName": "1.1.0",
+    "url": "https://github.com/CityNanFlower/whale-release/releases/download/win-v1.1.0/whale-win.zip",
+    "sha256": "cf3ca8695a2d076bc1215454522d00c8c7bff8fd0b0a229100c07ccd200abbcd",
+    "installerUrl": "https://github.com/CityNanFlower/whale-release/releases/download/win-v1.1.0/whale-setup.exe",
+    "installerSha256": "dcc2b0807f986228590957eb6c096d35ff45168b08e982e24c50ed8e51931637",
+    "alignedAndroid": "0.2.1-alpha.1",
+    "notes": "本次更新：角色卡新增「形态」——陪伴 / 多线 / 玩法 / 工具；语音补齐（声音类型胶囊、复刻音色可在应用内直接录、角色专属音色支持混合音色与试听）；发现页重做；桌面端新增托盘菜单与启动时的更新检查、设置页与发现页改成侧边栏布局、界面去掉手机上的「框框」。"
+  }
+}

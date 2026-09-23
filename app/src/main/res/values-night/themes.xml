@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 暗色模式的窗口底色：与 Theme.kt 里 DarkColors.background (#14101E) 保持一致，
+         避免启动瞬间/透明容器处露出白底（问题 #5）。
+         系统栏同样设为透明并关掉蒙层，避免底部一条黑边（2026-09-14）。 -->
+    <style name="Theme.MystiCat" parent="android:Theme.Material.NoActionBar">
+        <item name="android:windowBackground">#14101E</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:enforceStatusBarContrast">false</item>
+        <item name="android:enforceNavigationBarContrast">false</item>
+    </style>
+</resources>
