@@ -1,0 +1,17 @@
+{
+  "versionCode": 17,
+  "versionName": "0.2.2-alpha.1",
+  "url": "https://github.com/CityNanFlower/whale/releases/download/v0.2.2-alpha.1/whale.apk",
+  "sha256": "a588afcf300d84f2bb6b9f36b134fae61a74eba0fe9ded0bb3b48d179e9a6201",
+  "notes": "本次更新：角色卡新增「世界书」——世界观拆成一条条词条，每条有自己的触发关键词，聊到什么才注入什么（兼容酒馆 World Info，导入别人的卡时自带的世界书会一起带进来，也能单独导入导出）；聊天页新增「世界书命中」面板，能看到本轮命中哪几条、为什么没命中；修好「从聊天页进编辑页改完角色卡返回、聊天页还在用旧卡」。",
+  "windows": {
+    "versionCode": 7,
+    "versionName": "1.1.0",
+    "url": "https://github.com/CityNanFlower/whale-release/releases/download/win-v1.1.0/whale-win.zip",
+    "sha256": "cf3ca8695a2d076bc1215454522d00c8c7bff8fd0b0a229100c07ccd200abbcd",
+    "installerUrl": "https://github.com/CityNanFlower/whale-release/releases/download/win-v1.1.0/whale-setup.exe",
+    "installerSha256": "dcc2b0807f986228590957eb6c096d35ff45168b08e982e24c50ed8e51931637",
+    "alignedAndroid": "0.2.1-alpha.1",
+    "notes": "本次更新：角色卡新增「形态」——陪伴 / 多线 / 玩法 / 工具；语音补齐（声音类型胶囊、复刻音色可在应用内直接录、角色专属音色支持混合音色与试听）；发现页重做；桌面端新增托盘菜单与启动时的更新检查、设置页与发现页改成侧边栏布局、界面去掉手机上的「框框」。"
+  }
+}
