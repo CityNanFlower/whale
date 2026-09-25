@@ -1,17 +1,17 @@
 {
-  "versionCode": 18,
-  "versionName": "0.2.2-alpha.2",
-  "url": "https://github.com/CityNanFlower/whale/releases/download/v0.2.2-alpha.2/whale.apk",
-  "sha256": "806e13ba1e28205855660c2bf8f5384c19eb1eda4c97c4233a66576b83fd3e07",
-  "notes": "本次更新：世界书独立成册——「角色卡」页升级为「宝库」（角色｜世界书两段切换），世界书可单独新建/导入导出、被多张卡共用、随备份迁移；条目批量管理与「从文本生成条目」；未命中诊断升级（逐条给原因，含近似关键词提示）；修复工具/玩法卡不能自动朗读、说明文字 markdown 露出等问题。",
+  "versionCode": 19,
+  "versionName": "0.2.2-alpha.3",
+  "url": "https://github.com/CityNanFlower/whale/releases/download/v0.2.2-alpha.3/whale.apk",
+  "sha256": "27c78d1dabb85e7cda07f2e163d0c3521ff247b25e48e12814f37714f5368327",
+  "notes": "本次更新：世界书用起来更顺手——宝库书编辑区可逐卡管理「使用这本书的角色」（支持搜索/分类筛选）；角色编辑器「世界书」分节升级为「世界书管理」（选已有书可搜索、编辑/新建跳宝库）；灵感创作新增「世界书」创作（AI 生成整本存进宝库）；命中面板显示书名、未命中原因默认折叠；修复跳转后书编辑器删除没反应等问题。",
   "windows": {
-    "versionCode": 8,
-    "versionName": "1.2.0",
-    "url": "https://github.com/CityNanFlower/whale/releases/download/win-v1.2.0/whale-win.zip",
-    "sha256": "909709255c071d8f6469079b043fb69a77d0fff0938a23be432fabd64064e9a7",
-    "installerUrl": "https://github.com/CityNanFlower/whale/releases/download/win-v1.2.0/whale-setup.exe",
-    "installerSha256": "f76f571fddb43ffb0b571ce6e617d617efdab4009e130636672a627b3b7fa474",
-    "alignedAndroid": "0.2.2-alpha.2",
-    "notes": "本次更新：世界书独立成册（上一版「世界书暂不支持」已解决）——可单独新建/导入导出、被多张卡共用、随备份迁移；「角色卡」页升级为「宝库」（角色｜世界书两段切换）；条目批量管理与「从文本生成条目」；修复设置页改了没生效/被改回去、说明文字 markdown 露出等问题。"
+    "versionCode": 9,
+    "versionName": "1.3.0",
+    "url": "https://github.com/CityNanFlower/whale/releases/download/win-v1.3.0/whale-win.zip",
+    "sha256": "3a6d7472ff88c83b747a0666c426130ab64ab6e6836daf6e5a2e3f89a9ff3cd4",
+    "installerUrl": "https://github.com/CityNanFlower/whale/releases/download/win-v1.3.0/whale-setup.exe",
+    "installerSha256": "267c867a0c9d4e93cebc0da450cd55e85431695b57573a1f948399286c640c01",
+    "alignedAndroid": "0.2.2-alpha.3",
+    "notes": "本次更新：世界书用起来更顺手——宝库书编辑区可逐卡管理「使用这本书的角色」（支持搜索/分类筛选）；角色编辑器「世界书」分节升级为「世界书管理」（选已有书可搜索、编辑/新建跳宝库）；灵感创作新增「世界书」创作（AI 生成整本存进宝库）；命中面板显示书名、未命中原因默认折叠；修复跳转后书编辑器删除没反应等问题。"
   }
 }
