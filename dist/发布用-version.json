@@ -1,0 +1,17 @@
+{
+  "versionCode": 18,
+  "versionName": "0.2.2-alpha.2",
+  "url": "https://github.com/CityNanFlower/whale/releases/download/v0.2.2-alpha.2/whale.apk",
+  "sha256": "806e13ba1e28205855660c2bf8f5384c19eb1eda4c97c4233a66576b83fd3e07",
+  "notes": "本次更新：世界书独立成册——「角色卡」页升级为「宝库」（角色｜世界书两段切换），世界书可单独新建/导入导出、被多张卡共用、随备份迁移；条目批量管理与「从文本生成条目」；未命中诊断升级（逐条给原因，含近似关键词提示）；修复工具/玩法卡不能自动朗读、说明文字 markdown 露出等问题。",
+  "windows": {
+    "versionCode": 8,
+    "versionName": "1.2.0",
+    "url": "https://github.com/CityNanFlower/whale/releases/download/win-v1.2.0/whale-win.zip",
+    "sha256": "909709255c071d8f6469079b043fb69a77d0fff0938a23be432fabd64064e9a7",
+    "installerUrl": "https://github.com/CityNanFlower/whale/releases/download/win-v1.2.0/whale-setup.exe",
+    "installerSha256": "f76f571fddb43ffb0b571ce6e617d617efdab4009e130636672a627b3b7fa474",
+    "alignedAndroid": "0.2.2-alpha.2",
+    "notes": "本次更新：世界书独立成册（上一版「世界书暂不支持」已解决）——可单独新建/导入导出、被多张卡共用、随备份迁移；「角色卡」页升级为「宝库」（角色｜世界书两段切换）；条目批量管理与「从文本生成条目」；修复设置页改了没生效/被改回去、说明文字 markdown 露出等问题。"
+  }
+}

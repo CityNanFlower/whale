@@ -1,0 +1,125 @@
+# 版本目录（Gradle Version Catalog）—— 全仓唯一的版本来源。
+# 建立于桌面版 M2（第 17 轮）：此前版本散在根/模块两个 build.gradle.kts 里。
+# 工具链取值＝独立探针工程实测修正后的组合，不要再凭印象改。
+
+[versions]
+# ── 工具链 ───────────────────────────────────────────────────────────────
+# ⚠ 探针实测：kotlin 2.2.20 编译不过（coil3 3.6.2 是 Kotlin 2.4 编的，会拉进 stdlib 2.4.10，
+#   而 2.2.20 编译器只能读到 2.3 元数据），抬到 2.3.21 后两端全通 —— 只动了这一个变量。
+kotlin = "2.3.21"
+agp = "8.13.0"
+composeMultiplatform = "1.11.1"        # M3 定稿（第 18 轮）：纯净映射＝Android compose 1.11.2，与 AGP 8.13 兼容；coil3 须 3.5.0
+androidCompileSdk = "36"               # 34 → 36：Compose 1.12 线要求
+androidMinSdk = "26"                   # 不动
+androidTargetSdk = "34"                # 不动：改它引入运行时行为变更，与迁移目标无关
+jvmTarget = "17"                       # 不动
+
+# ── 版本号（Android / 桌面两条独立版本线，靠 alignedAndroid 追溯）──
+# 桌面 1.0.2 / Android 0.2.0-alpha.2 于 2026-09-21 一同出包（tag win-v1.0.2 / v0.2.0-alpha.2）。
+# 桌面 1.0.3 的开发线自第 56 轮接棒；第 59 轮补上这次 bump —— 此前 toml 仍是 1.0.2/code 3，
+# 与 Windows 计划文件写的 1.0.3/code 4 不符，后果很硬：`packagePortable` 会按名字**覆盖已发布的
+# `鲸鱼-Windows-1.0.2-win.zip`**，而线上 `发布用-version.json` 里的 sha256 指向的是旧字节。
+# alignedAndroid 在**发版轮**里按实际对齐关系改，开发轮不要提前动。
+# Android 0.2.0-alpha.3 与桌面 1.0.3 于 2026-09-21 同批出包（tag v0.2.0-alpha.3 / win-v1.0.3）；
+# 本版的共享层内容一致（第 63/64 轮＝桌面第 57–60 轮），所以 alignedAndroid 跟到 alpha.3。
+# Android 0.2.1-alpha.1（第 66 轮起）：用户 2026-09-21 拍板「角色卡引擎」作为一个功能批次立项，
+# 按技能第五节的编号规矩走「功能批次 → patch+1 且 alpha 归 1」⇒ 0.2.0-alpha.3 → **0.2.1-alpha.1**。
+# 该版已于 2026-09-23 发出（tag `v0.2.1-alpha.1`，改动内容见对外更新日志）。
+# Android 0.2.2-alpha.1（第 86 轮起）：0.2.1 发版时 E3 世界书是唯一没动过的大件，用户 2026-09-23
+# 定「世界书走 v0.2.2 版本线」⇒ 收在 0.2.1-alpha.1、开 0.2.2-alpha.1 专做世界书。
+# 该版已于 2026-09-24 发出（第 100 轮，tag `v0.2.2-alpha.1`）。
+# Android 0.2.2-alpha.2（第 104 轮起）：用户 2026-09-24 定「发版之后的所有改动都归到 0.2.2-alpha.2」
+# ⇒ 同系列迭代 alpha+1，收的是一串反馈修复（含工具/玩法形态的语音朗读同步）。
+androidVersionCode = "18"
+androidVersionName = "0.2.2-alpha.2"
+# 桌面 1.1.0：**minor 版本＝有新功能**——把三批"改了没发"的东西一次发出：
+# 托盘更新入口（第 64 轮）、共享层继承（Android 73–85 轮的形态引擎/语音/发现页）、桌面设置页重做（87–88 轮）。
+# 桌面 1.2.0：**minor 版本＝有新功能**——世界书独立化（Android 104–110 轮的共享层内容：
+# 世界书账号级实体＋宝库三段壳＋调试与批量）＋双端修复（设置页快照回滚 / markdown 露出等）。
+desktopVersionCode = "8"
+desktopVersionName = "1.2.0"
+# 对齐的 Android 版本＝桌面这一版功能集追到哪儿（共享层两端共用，所以 Android 已发的改动桌面自动受益）
+desktopAlignedAndroid = "0.2.2-alpha.2"
+
+# ── 依赖 ─────────────────────────────────────────────────────────────────
+# ⚠ 卡在 AGP 8.13 的能力上限内（第 17 轮实测 AAR 元数据）：
+#   compose 1.11.x 要 minCompileSdk 35 / minAGP 8.6.0 → 可用；
+#   compose 1.12.x 要 minCompileSdk 37 / minAGP 9.1.0 → 应用模块直接构建失败。
+#   BOM 2026.06.01 是最后一个 pin 到 1.11.4 的版本（2026.08.00 起是 1.12.0），别随手往新抬。
+composeBom = "2026.06.01"              # → compose 1.11.4 / material3 1.4.0 / icons 1.7.8
+coreKtx = "1.13.1"
+activityCompose = "1.9.0"
+lifecycle = "2.8.2"
+# M3 第一步（第 18 轮）坐标换血：Google 的 navigation/lifecycle-viewmodel-compose 是 Android-only，
+# CMP 的 shared 模块必须用 JetBrains 多平台坐标（保 androidx.* 包名，Android 侧委派 androidx 实现）。
+jetbrainsNavigation = "2.9.2"
+jetbrainsLifecycleViewmodel = "2.9.6"
+kotlinxCoroutines = "1.8.1"
+kotlinxSerialization = "1.6.3"
+okhttp = "4.12.0"
+# coil2 → coil3（M3）：coil3 是 KMP 版。⚠ 必须 3.5.0：3.6.x 起把 androidx compose 严格抬到 1.12.0，
+# app 模块（application）过不了 AAR 元数据闸门（逐依赖二分实锤）。
+coil3 = "3.5.0"
+markwon = "4.6.2"
+# 桌面专属（jvmMain）：DPAPI 需要调 Win32 Crypt32，纯 JDK 无路可走 → JNA（2026-09-17 核实
+# Maven Central 元数据，最新 5.19.1）。只进 jvmMain，Android 侧看不见。
+jna = "5.19.1"
+# MP3 解码三件套（mp3spi + jlayer + tritonus-share，后者两者由 POM 传递引入；已核实 POM 依赖）。
+# 为什么必须有：供应商合成的音频是 MP3，Java Sound 原生只认 WAV/AIFF/AU（M1 探针第 10 条实测）。
+soundlibsMp3spi = "1.9.5.4"
+# 第 60 轮加的「Java Sound 解码 SPI」（用户要求上传支持 m4a 等主流格式）。
+# 这三家是同一套 SPI 家族（com.tianscar.javasound，Apache-2.0；本体分别是 jaad/jflac/jorbis），
+# 装上去之后 Java Sound 的 AudioSystem 就能直接读这些格式 ⇒ 播放代码一行不用改（仍走 Clip）。
+# ⚠ 只有桌面需要：Android 的 MediaPlayer 原生就认这些格式。
+javasoundAac = "0.9.8"
+javasoundFlac = "1.4.1"
+javasoundVorbis = "2.1.0"
+
+[libraries]
+compose-bom = { module = "androidx.compose:compose-bom", version.ref = "composeBom" }
+
+androidx-core-ktx = { module = "androidx.core:core-ktx", version.ref = "coreKtx" }
+androidx-activity-compose = { module = "androidx.activity:activity-compose", version.ref = "activityCompose" }
+androidx-lifecycle-runtime-ktx = { module = "androidx.lifecycle:lifecycle-runtime-ktx", version.ref = "lifecycle" }
+androidx-lifecycle-viewmodel-ktx = { module = "androidx.lifecycle:lifecycle-viewmodel-ktx", version.ref = "lifecycle" }
+jetbrains-lifecycle-viewmodel-compose = { module = "org.jetbrains.androidx.lifecycle:lifecycle-viewmodel-compose", version.ref = "jetbrainsLifecycleViewmodel" }
+
+compose-ui = { module = "androidx.compose.ui:ui" }
+compose-ui-tooling-preview = { module = "androidx.compose.ui:ui-tooling-preview" }
+compose-ui-tooling = { module = "androidx.compose.ui:ui-tooling" }
+compose-material3 = { module = "androidx.compose.material3:material3" }
+compose-material-icons-extended = { module = "androidx.compose.material:material-icons-extended" }
+
+jetbrains-navigation-compose = { module = "org.jetbrains.androidx.navigation:navigation-compose", version.ref = "jetbrainsNavigation" }
+
+kotlinx-coroutines-android = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "kotlinxCoroutines" }
+kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlinxCoroutines" }
+# 桌面端 Dispatchers.Main（Compose Desktop 的 UI 线程就是 Swing EDT；缺它 Main 调度器不可用）
+kotlinx-coroutines-swing = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-swing", version.ref = "kotlinxCoroutines" }
+kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinxSerialization" }
+
+okhttp = { module = "com.squareup.okhttp3:okhttp", version.ref = "okhttp" }
+coil3-compose = { module = "io.coil-kt.coil3:coil-compose", version.ref = "coil3" }
+coil3-network-okhttp = { module = "io.coil-kt.coil3:coil-network-okhttp", version.ref = "coil3" }
+markwon-core = { module = "io.noties.markwon:core", version.ref = "markwon" }
+
+jna-platform = { module = "net.java.dev.jna:jna-platform", version.ref = "jna" }
+soundlibs-mp3spi = { module = "com.googlecode.soundlibs:mp3spi", version.ref = "soundlibsMp3spi" }
+javasound-aac = { module = "com.tianscar.javasound:javasound-aac", version.ref = "javasoundAac" }
+javasound-flac = { module = "com.tianscar.javasound:javasound-flac", version.ref = "javasoundFlac" }
+javasound-vorbis = { module = "com.tianscar.javasound:javasound-vorbis", version.ref = "javasoundVorbis" }
+
+# M3 抽 shared 用的插件别名（composeMultiplatform 版本值见上方依赖区）
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+kotlin-multiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
+kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+android-library = { id = "com.android.library", version.ref = "agp" }
+compose-multiplatform = { id = "org.jetbrains.compose", version.ref = "composeMultiplatform" }
+kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
+# Kotlin 2.x 起 Compose 编译器随 Kotlin 版本走，必须显式应用这个插件；
+# 旧的 android.composeOptions.kotlinCompilerExtensionVersion 写法已作废。
+compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
+
+# M3 抽 shared 时启用（届时再加 androidLibrary / kotlinMultiplatform 等别名）
