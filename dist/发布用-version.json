@@ -1,9 +1,9 @@
 {
-  "versionCode": 17,
-  "versionName": "0.2.2-alpha.1",
-  "url": "https://github.com/CityNanFlower/whale/releases/download/v0.2.2-alpha.1/whale.apk",
-  "sha256": "a588afcf300d84f2bb6b9f36b134fae61a74eba0fe9ded0bb3b48d179e9a6201",
-  "notes": "本次更新：角色卡新增「世界书」——世界观拆成一条条词条，每条有自己的触发关键词，聊到什么才注入什么（兼容酒馆 World Info，导入别人的卡时自带的世界书会一起带进来，也能单独导入导出）；聊天页新增「世界书命中」面板，能看到本轮命中哪几条、为什么没命中；修好「从聊天页进编辑页改完角色卡返回、聊天页还在用旧卡」。",
+  "versionCode": 18,
+  "versionName": "0.2.2-alpha.2",
+  "url": "https://github.com/CityNanFlower/whale/releases/download/v0.2.2-alpha.2/whale.apk",
+  "sha256": "806e13ba1e28205855660c2bf8f5384c19eb1eda4c97c4233a66576b83fd3e07",
+  "notes": "本次更新：世界书独立成册——「角色卡」页升级为「宝库」（角色｜世界书两段切换），世界书可单独新建/导入导出、被多张卡共用、随备份迁移；条目批量管理与「从文本生成条目」；未命中诊断升级（逐条给原因，含近似关键词提示）；修复工具/玩法卡不能自动朗读、说明文字 markdown 露出等问题。",
   "windows": {
     "versionCode": 7,
     "versionName": "1.1.0",
