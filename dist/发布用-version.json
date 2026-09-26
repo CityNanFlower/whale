@@ -1,0 +1,17 @@
+{
+  "versionCode": 20,
+  "versionName": "0.2.3-alpha.1",
+  "url": "https://github.com/CityNanFlower/whale/releases/download/v0.2.3-alpha.1/whale.apk",
+  "sha256": "f2360960f2e64e8671afb5f75e81efffd9bd525092436636f23ef2454807baba",
+  "notes": "本次更新：界面更好用了——⋮ 变成分组的「会话面板」，角色名旁的「‹」直达角色信息整页，聊天页三个面板都改成独立整页；输入栏重做（发送键按需出现、「（）」填括号、＋ 互动面板、工具改卡片墙）；新增「关于鲸鱼」整页与自动检查更新（有新版时入口行会提示）；修复两处按返回键会退出聊天/退出 App 的问题。",
+  "windows": {
+    "versionCode": 10,
+    "versionName": "1.4.0",
+    "url": "https://github.com/CityNanFlower/whale/releases/download/win-v1.4.0/whale-win.zip",
+    "sha256": "63ce653e8df114b1f9835e99d5e0bcef5acd890102f537e90e59a19ae971f40a",
+    "installerUrl": "https://github.com/CityNanFlower/whale/releases/download/win-v1.4.0/whale-setup.exe",
+    "installerSha256": "275e1ea0d464dced986926e8334e7c402147d0a725ce71aac518e91898fa16f9",
+    "alignedAndroid": "0.2.3-alpha.1",
+    "notes": "本次更新：聊天页整体重排——输入栏改版（发送键按需出现、「（）」按光标填括号、＋ 互动面板、工具改卡片墙），三个侧栏都变成独立整页，角色卡改成「基础信息常驻＋四页签」，各页返回一律箭头；新增「关于鲸鱼」整页（含合规声明）与自动检查更新；修复托盘菜单在多屏/缩放下弹错位置。"
+  }
+}
