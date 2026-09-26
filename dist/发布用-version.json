@@ -1,0 +1,17 @@
+{
+  "versionCode": 20,
+  "versionName": "0.2.3-alpha.1",
+  "url": "https://github.com/CityNanFlower/whale/releases/download/v0.2.3-alpha.1/whale.apk",
+  "sha256": "f2360960f2e64e8671afb5f75e81efffd9bd525092436636f23ef2454807baba",
+  "notes": "本次更新：界面更好用了——⋮ 变成分组的「会话面板」，角色名旁的「‹」直达角色信息整页，聊天页三个面板都改成独立整页；输入栏重做（发送键按需出现、「（）」填括号、＋ 互动面板、工具改卡片墙）；新增「关于鲸鱼」整页与自动检查更新（有新版时入口行会提示）；修复两处按返回键会退出聊天/退出 App 的问题。",
+  "windows": {
+    "versionCode": 9,
+    "versionName": "1.3.0",
+    "url": "https://github.com/CityNanFlower/whale/releases/download/win-v1.3.0/whale-win.zip",
+    "sha256": "3a6d7472ff88c83b747a0666c426130ab64ab6e6836daf6e5a2e3f89a9ff3cd4",
+    "installerUrl": "https://github.com/CityNanFlower/whale/releases/download/win-v1.3.0/whale-setup.exe",
+    "installerSha256": "267c867a0c9d4e93cebc0da450cd55e85431695b57573a1f948399286c640c01",
+    "alignedAndroid": "0.2.2-alpha.3",
+    "notes": "本次更新：世界书用起来更顺手——宝库书编辑区可逐卡管理「使用这本书的角色」（支持搜索/分类筛选）；角色编辑器「世界书」分节升级为「世界书管理」（选已有书可搜索、编辑/新建跳宝库）；灵感创作新增「世界书」创作（AI 生成整本存进宝库）；命中面板显示书名、未命中原因默认折叠；修复跳转后书编辑器删除没反应等问题。"
+  }
+}
