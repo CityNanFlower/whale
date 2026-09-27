@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 继承平台 Material 主题，但它默认把 navigationBarColor 设成黑色：应用即使 edge-to-edge，
+         系统仍会用该颜色盖住导航栏区域，形成一条怎么布局都去不掉的黑边（2026-09-14 定位）。
+         这两个系统栏都设为透明、并关掉对比度蒙层，该区域的颜色完全交给应用自己绘制。 -->
+    <style name="Theme.MystiCat" parent="android:Theme.Material.Light.NoActionBar">
+        <item name="android:windowBackground">@android:color/white</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:enforceStatusBarContrast">false</item>
+        <item name="android:enforceNavigationBarContrast">false</item>
+    </style>
+</resources>

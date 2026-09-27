@@ -1,0 +1,4 @@
+# 复制为 local.properties 并把路径改成你本机的 Android SDK 安装位置（Gradle 只读 local.properties，不读本示例文件）。
+# 用 Android Studio 打开工程时通常会自动生成；命令行构建只需填 sdk.dir。
+# 值里的反斜杠和冒号要按 Java properties 规则转义，如下：
+sdk.dir=C\:\\Users\\<your-username>\\AppData\\Local\\Android\\Sdk

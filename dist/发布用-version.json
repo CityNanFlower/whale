@@ -1,0 +1,17 @@
+{
+  "versionCode": 21,
+  "versionName": "0.2.3-alpha.2",
+  "url": "https://github.com/CityNanFlower/whale/releases/download/v0.2.3-alpha.2/whale.apk",
+  "sha256": "440cb311cfa0c1f97c4a9870ba9d2def55de82d05f6f45ef1c1cbbad678ec9cc",
+  "notes": "本次更新：1) 语音复刻（音色克隆）改用新接口——新版控制台的 API Key 现在能直接用，复刻完成后可免费试听官方片段；2) 修好聊天朗读报「资源不匹配」：以音色为准判断所属语音家族，非火山音色会直接说明、旧卡上过时的模型档位自动校正；3) 新增「素材库」——AI 生成的图与文自动存进来，按形象/背景/角色卡/世界书/故事分类查看，图可直接当头像、背景或要发的图片（「从素材库选择」），随全量备份一起走；4) 「拍摄」接通系统相机；5) 键盘弹出时输入栏右侧只留「（）」与发送，并修好键盘挡住「工具/＋」面板点不到的问题。",
+  "windows": {
+    "versionCode": 10,
+    "versionName": "1.4.0",
+    "url": "https://github.com/CityNanFlower/whale/releases/download/win-v1.4.0/whale-win.zip",
+    "sha256": "63ce653e8df114b1f9835e99d5e0bcef5acd890102f537e90e59a19ae971f40a",
+    "installerUrl": "https://github.com/CityNanFlower/whale/releases/download/win-v1.4.0/whale-setup.exe",
+    "installerSha256": "275e1ea0d464dced986926e8334e7c402147d0a725ce71aac518e91898fa16f9",
+    "alignedAndroid": "0.2.3-alpha.1",
+    "notes": "本次更新：聊天页整体重排——输入栏改版（发送键按需出现、「（）」按光标填括号、＋ 互动面板、工具改卡片墙），三个侧栏都变成独立整页，角色卡改成「基础信息常驻＋四页签」，各页返回一律箭头；新增「关于鲸鱼」整页（含合规声明）与自动检查更新；修复托盘菜单在多屏/缩放下弹错位置。"
+  }
+}
