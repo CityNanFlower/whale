@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 应用内下载新安装包后直接唤起系统安装器（用户要求：不必挂 VPN 去 GitHub 下包） -->
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+    <!-- 语音输入（Step 3）：本项目第一个麦克风权限。运行时申请，只在"按住说话"时录音，不后台采集 -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+    <!--
+      系统识别（SpeechRecognizer）在 Android 11+ 的包可见性要求：不声明这段 queries 时
+      createSpeechRecognizer() 会拿不到任何识别服务（isRecognitionAvailable() 返回 false），
+      表现为"点了麦克风没反应"。这不是权限问题，查起来很容易走偏。
+    -->
+    <queries>
+        <intent>
+            <action android:name="android.speech.RecognitionService" />
+        </intent>
+    </queries>
+
+    <!--
+      明文流量（2026-09-17）：之所以要开，是为了两件**已经在功能里承诺过**的事 ——
+      ① 本地部署的语音服务（Kokoro-FastAPI / Speaches / Xinverse+CosyVoice 等）本来就跑在
+         `http://192.168.x.x:8880`，targetSdk 28+ 默认禁明文的话，AiClient 里那套
+         "仅放行回环与私有网段 http" 的检查等于白写，点试听只会拿到
+         `CLEARTEXT communication … not permitted by network security policy`；
+      ② 供应商返回的**远端资源链接**可能是 http（实测阿里 OSS 预签名链接就是 http），
+         下载音频/图片时会被同一条策略拦下。
+      **真正的把关仍在 App 代码里**：对话/创作/生图三条链路走 requireHttps（http 一律拒绝），
+      只有语音那一条放行私有网段，且要求用户在「语音朗读」页明确填地址；远端链接也只对 http 公网地址
+      升级成 https 后再取（见 AiClient.httpsUrl）。所以这里的开关只是"别让平台把私网 http 也一起掐死"。
+    -->
+    <application
+        android:name=".App"
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:usesCleartextTraffic="true"
+        android:theme="@style/Theme.MystiCat">
+
+        <!-- 旋转交给系统重建 Activity（2026-09-15 用户反馈"横过来竖不回去"）：
+             原来声明了 orientation|screenSize|screenLayout ⇒ 旋转时不重建、由应用自己扛，
+             一旦哪条路径没跟上就是单向卡死。改成只留 keyboardHidden（软键盘显隐不该重建），
+             旋转走框架的标准双向路径；界面状态本来就在 ChatViewModel 里，重建不丢正在生成的回复。 -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:windowSoftInputMode="adjustResize"
+            android:configChanges="keyboardHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- 字体渲染探针：独立进程 + 独立任务栈，崩了不带主进程也不把主任务挤到后台（见 FontProbe.kt） -->
+        <activity
+            android:name=".FontProbeActivity"
+            android:exported="false"
+            android:process=":fontprobe"
+            android:taskAffinity=""
+            android:noHistory="true"
+            android:excludeFromRecents="true"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <!-- 崩溃救援：**必须独立进程**——主进程崩溃后主线程已死，
+             同进程里 startActivity 起来的界面跑不起来（见 RescueActivity.kt） -->
+        <activity
+            android:name=".RescueActivity"
+            android:exported="false"
+            android:process=":crashrescue"
+            android:taskAffinity=""
+            android:noHistory="true"
+            android:excludeFromRecents="true"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+    </application>
+
+</manifest>

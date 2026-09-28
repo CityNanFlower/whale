@@ -1,0 +1,17 @@
+{
+  "versionCode": 22,
+  "versionName": "0.2.4-alpha.1",
+  "url": "https://github.com/CityNanFlower/whale/releases/download/v0.2.4-alpha.1/whale.apk",
+  "sha256": "b6a727a5348b6e21f547515f3c66adeeb01151c075cbee6c7cce9e0bfbfe05ff",
+  "notes": "本次更新：1) 对话质量第二轮打磨——AI 更清楚「现在是什么处境」、该收尾能收尾、重复开场更少，回复里的选项可以直接点；2) 新增「上次请求」查看器（聊天页「工具」抽屉），能看到这条回复实际发给模型的完整内容；3) 「关键词覆盖检查」升级为独立入口；4) 内容档位回落——模型拒答时自动换更宽松的档位重试，灵感/前情提要/角色记忆/生成同样受保护，设置页可关；5) 修复部分兼容端点空回复被静默丢弃的问题；6) 语音复刻「查状态」失败时显示服务端具体原因；7) 输入框光标点按/拖动按「移到键入位置」工作；8) 免责声明与年龄声明按主流表述重写。",
+  "windows": {
+    "versionCode": 11,
+    "versionName": "1.5.0",
+    "url": "https://github.com/CityNanFlower/whale/releases/download/win-v1.5.0/whale-win.zip",
+    "sha256": "9e0dc23e0f98349feabaaec28f55963ae5cd2c3d3edfc78144ae4d35feb1414a",
+    "installerUrl": "https://github.com/CityNanFlower/whale/releases/download/win-v1.5.0/whale-setup.exe",
+    "installerSha256": "e144616bf1bf94e0fe22e93c4a14b835ce07a5d260ce8f95e2bad8814a9fdbf3",
+    "alignedAndroid": "0.2.4-alpha.1",
+    "notes": "本次更新：把手机端近几周的改动整批带给桌面——新增「素材库」（AI 生成的图与文自动存进来、按分类管理、选图处可「从素材库选择」、随全量备份走）；新增「上次请求」查看器与「关键词覆盖检查」独立入口；内容档位回落（拒答自动重试）；对话质量第二轮打磨；灵感创作类型/标签栏改成胶囊＋两端箭头；修复设置页 Esc 返回跳回最顶部的问题。"
+  }
+}

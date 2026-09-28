@@ -1,0 +1,28 @@
+# 构建产物与 IDE
+*.iml
+.gradle/
+/local.properties
+/.idea/
+.DS_Store
+build/
+captures/
+.externalNativeBuild/
+.cxx/
+
+# 签名与凭据：永不提交（丢了 keystore 就无法给老用户升级）
+keystore.properties
+*.jks
+*.keystore
+*.apk
+*.aab
+
+# 发版产物里的安装包/压缩包太大不进库（dist/ 顶层的 version.json 与对外更新日志照常跟踪）
+dist/windows/*.zip
+dist/windows/*.sha256
+dist/windows/*.exe
+dist/windows/old/
+*.msi
+
+# 本地临时物
+__pycache__/
+*.pyc
