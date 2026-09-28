@@ -1,17 +1,17 @@
 {
-  "versionCode": 21,
-  "versionName": "0.2.3-alpha.2",
-  "url": "https://github.com/CityNanFlower/whale/releases/download/v0.2.3-alpha.2/whale.apk",
-  "sha256": "440cb311cfa0c1f97c4a9870ba9d2def55de82d05f6f45ef1c1cbbad678ec9cc",
-  "notes": "本次更新：1) 语音复刻（音色克隆）改用新接口——新版控制台的 API Key 现在能直接用，复刻完成后可免费试听官方片段；2) 修好聊天朗读报「资源不匹配」：以音色为准判断所属语音家族，非火山音色会直接说明、旧卡上过时的模型档位自动校正；3) 新增「素材库」——AI 生成的图与文自动存进来，按形象/背景/角色卡/世界书/故事分类查看，图可直接当头像、背景或要发的图片（「从素材库选择」），随全量备份一起走；4) 「拍摄」接通系统相机；5) 键盘弹出时输入栏右侧只留「（）」与发送，并修好键盘挡住「工具/＋」面板点不到的问题。",
+  "versionCode": 22,
+  "versionName": "0.2.4-alpha.1",
+  "url": "https://github.com/CityNanFlower/whale/releases/download/v0.2.4-alpha.1/whale.apk",
+  "sha256": "b6a727a5348b6e21f547515f3c66adeeb01151c075cbee6c7cce9e0bfbfe05ff",
+  "notes": "本次更新：1) 对话质量第二轮打磨——AI 更清楚「现在是什么处境」、该收尾能收尾、重复开场更少，回复里的选项可以直接点；2) 新增「上次请求」查看器（聊天页「工具」抽屉），能看到这条回复实际发给模型的完整内容；3) 「关键词覆盖检查」升级为独立入口；4) 内容档位回落——模型拒答时自动换更宽松的档位重试，灵感/前情提要/角色记忆/生成同样受保护，设置页可关；5) 修复部分兼容端点空回复被静默丢弃的问题；6) 语音复刻「查状态」失败时显示服务端具体原因；7) 输入框光标点按/拖动按「移到键入位置」工作；8) 免责声明与年龄声明按主流表述重写。",
   "windows": {
-    "versionCode": 10,
-    "versionName": "1.4.0",
-    "url": "https://github.com/CityNanFlower/whale/releases/download/win-v1.4.0/whale-win.zip",
-    "sha256": "63ce653e8df114b1f9835e99d5e0bcef5acd890102f537e90e59a19ae971f40a",
-    "installerUrl": "https://github.com/CityNanFlower/whale/releases/download/win-v1.4.0/whale-setup.exe",
-    "installerSha256": "275e1ea0d464dced986926e8334e7c402147d0a725ce71aac518e91898fa16f9",
-    "alignedAndroid": "0.2.3-alpha.1",
-    "notes": "本次更新：聊天页整体重排——输入栏改版（发送键按需出现、「（）」按光标填括号、＋ 互动面板、工具改卡片墙），三个侧栏都变成独立整页，角色卡改成「基础信息常驻＋四页签」，各页返回一律箭头；新增「关于鲸鱼」整页（含合规声明）与自动检查更新；修复托盘菜单在多屏/缩放下弹错位置。"
+    "versionCode": 11,
+    "versionName": "1.5.0",
+    "url": "https://github.com/CityNanFlower/whale/releases/download/win-v1.5.0/whale-win.zip",
+    "sha256": "9e0dc23e0f98349feabaaec28f55963ae5cd2c3d3edfc78144ae4d35feb1414a",
+    "installerUrl": "https://github.com/CityNanFlower/whale/releases/download/win-v1.5.0/whale-setup.exe",
+    "installerSha256": "e144616bf1bf94e0fe22e93c4a14b835ce07a5d260ce8f95e2bad8814a9fdbf3",
+    "alignedAndroid": "0.2.4-alpha.1",
+    "notes": "本次更新：把手机端近几周的改动整批带给桌面——新增「素材库」（AI 生成的图与文自动存进来、按分类管理、选图处可「从素材库选择」、随全量备份走）；新增「上次请求」查看器与「关键词覆盖检查」独立入口；内容档位回落（拒答自动重试）；对话质量第二轮打磨；灵感创作类型/标签栏改成胶囊＋两端箭头；修复设置页 Esc 返回跳回最顶部的问题。"
   }
 }
