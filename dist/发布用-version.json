@@ -1,0 +1,17 @@
+{
+  "versionCode": 23,
+  "versionName": "0.2.5-alpha.1",
+  "url": "https://github.com/CityNanFlower/whale/releases/download/v0.2.5-alpha.1/whale.apk",
+  "sha256": "f0ebefa507ea617c9bdb22f087113d723e91a3b6a019bc93f9f81939e93f7a0d",
+  "notes": "本次更新：新增「用量统计」——每次请求真实消耗的 token 按链路/模型/日期图表可查；修掉三类对话卡壳（只思考不出正文自动加预算重发、逐字复读自动掐断、输出被截断不再无声）；对话预算开放自定义；开发者模式可查看思考过程；素材库详情按分类给存取动作（存相册/存为角色卡/存为新世界书）。",
+  "windows": {
+    "versionCode": 12,
+    "versionName": "1.6.0",
+    "url": "https://github.com/CityNanFlower/whale/releases/download/win-v1.6.0/whale-win.zip",
+    "sha256": "e0d981621ea5a798275fedd622c3325e5f600b1495d012dd1524933cd8110dbe",
+    "installerUrl": "https://github.com/CityNanFlower/whale/releases/download/win-v1.6.0/whale-setup.exe",
+    "installerSha256": "9bccb98d15f93d60f61f6362fede17c26a7f2b91cee24a6ae54ad9effe677e08",
+    "alignedAndroid": "0.2.5-alpha.1",
+    "notes": "本次更新：新增「用量统计」独立页——每次请求真实消耗的 token 按链路/模型/日期图表可查；修掉三类对话卡壳（只思考不出正文自动加预算重发、逐字复读自动掐断）；对话预算开放自定义；横向胶囊行统一加左右箭头；素材库详情按分类给存取动作（存导出目录/存为角色卡/存为新世界书）。"
+  }
+}
