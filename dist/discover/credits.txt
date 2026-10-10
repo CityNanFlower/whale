@@ -1,0 +1,36 @@
+鲸鱼 · 发现页精选内容 · 图源清单
+================================================================
+角色卡的**头像与背景**＝Pixabay 动漫画风插画。
+  许可＝Pixabay Content License：免费商用、无需署名、禁转售原图。
+分组**封面**＝Pexels 实景风景照片（主题场景，不是角色卡）。
+  许可＝Pexels License：免费商用、无需署名、禁转售原图。
+本文件随精选包生成时一并产出（改 CARD_META / PACKS 后重新生成即同步）。
+
+角色卡头像 / 背景（15 张卡各一张源图，同一张裁出头像＋两端背景）
+----------------------------------------------------------------
+青春校园
+  陆昭（多线）       https://cdn.pixabay.com/photo/2024/05/31/14/48/student-8800722_1280.jpg
+  夏栀（陪伴）       https://cdn.pixabay.com/photo/2023/10/29/06/51/women-8348815_1280.jpg
+  晚自习推理（玩法）    https://cdn.pixabay.com/photo/2024/03/20/10/43/ai-generated-8645207_1280.png
+  作文批改（工具）     https://cdn.pixabay.com/photo/2023/12/09/04/58/ai-generated-8438610_1280.jpg
+古风江湖
+  沈青梧（陪伴）      https://cdn.pixabay.com/photo/2025/05/14/16/13/girl-9599953_1280.png
+  凌霜（多线）       https://cdn.pixabay.com/photo/2024/04/28/14/10/woman-8725575_1280.jpg
+  江湖猜人（玩法）     https://cdn.pixabay.com/photo/2023/01/14/20/03/flashlight-7718966_1280.jpg
+  对句先生（工具）     https://cdn.pixabay.com/photo/2023/02/02/17/03/li-shizhen-7763362_1280.jpg
+都市夜话
+  林晚棠（陪伴）      https://cdn.pixabay.com/photo/2023/11/22/13/17/ai-generated-8405488_1280.jpg
+  白栖（多线）       https://cdn.pixabay.com/photo/2025/10/25/16/23/colorful-9916409_1280.png
+  深夜电台（玩法）     https://cdn.pixabay.com/photo/2025/01/15/18/53/anime-9335614_1280.png
+  情绪梳理（工具）     https://cdn.pixabay.com/photo/2024/03/21/15/42/anime-8648011_1280.jpg
+星辰与废土
+  薇拉（陪伴）       https://cdn.pixabay.com/photo/2025/09/23/08/27/minimalist-9850076_1280.jpg
+  晨曦（陪伴）       https://cdn.pixabay.com/photo/2021/01/01/16/06/hand-5879027_1280.jpg
+  南风（多线）       https://cdn.pixabay.com/photo/2023/06/28/16/13/ai-generated-8094744_1280.png
+
+分组封面
+----------------------------------------------------------------
+  青春校园     theme-campus         https://images.pexels.com/photos/8500353/pexels-photo-8500353.jpeg?auto=compress&cs=tinysrgb&w=1920
+  古风江湖     theme-jianghu        https://images.pexels.com/photos/8138275/pexels-photo-8138275.jpeg?auto=compress&cs=tinysrgb&w=1920
+  都市夜话     theme-city           https://images.pexels.com/photos/3048538/pexels-photo-3048538.jpeg?auto=compress&cs=tinysrgb&w=1920
+  星辰与废土    theme-wasteland      https://images.pexels.com/photos/6263903/pexels-photo-6263903.jpeg?auto=compress&cs=tinysrgb&w=1920
