@@ -1,17 +1,17 @@
 {
-  "versionCode": 24,
-  "versionName": "0.3.0-alpha.1",
-  "url": "https://github.com/CityNanFlower/whale/releases/download/v0.3.0-alpha.1/whale.apk",
-  "sha256": "6c0c1898a470948dc65b22491c8ae85d5cd6431b19cbe973f037f9f55de7d704",
-  "notes": "本次更新：整套界面设计语言重做——七套皮肤与皮肤中心（点卡即换、可投稿）、会话页 / 聊天记录页 / 宝库三页新骨架、全 App 顶栏与弹窗形式统一；模型切换分「本次使用 / 全局默认」两层；聊天背景改弹窗；使用手册整本重写。",
+  "versionCode": 25,
+  "versionName": "0.3.0-alpha.2",
+  "url": "https://github.com/CityNanFlower/whale/releases/download/v0.3.0-alpha.2/whale.apk",
+  "sha256": "fabd73e668abd929a8d6c79e9972949e6f51862552a2e899b749309a522bde56",
+  "notes": "本次更新：语音「试识别」补到系统识别分支；聊天背景按图自动适配主题（与电脑端同一观感）；通知类弹窗与输入框形式统一。",
   "windows": {
-    "versionCode": 13,
-    "versionName": "1.7.0",
-    "url": "https://github.com/CityNanFlower/whale/releases/download/win-v1.7.0/whale-win.zip",
-    "sha256": "f41087e85f9b4e7a6035ade19a3cbd7b9739a897277f344627ac3afa031d1d25",
-    "installerUrl": "https://github.com/CityNanFlower/whale/releases/download/win-v1.7.0/whale-setup.exe",
-    "installerSha256": "b64c55135aaf5e14f0dc67a7e6eaf4d1e90114bc054cef24297644bfc04c9838",
-    "alignedAndroid": "0.3.0-alpha.1",
-    "notes": "本次更新：与 Android 0.3.0-alpha.1 同批——七套皮肤与皮肤中心、「编辑角色卡 / 编辑世界书」两段式、右栏一键收展、多页行表式与字体清晰度修复。"
+    "versionCode": 14,
+    "versionName": "1.7.1",
+    "url": "https://github.com/CityNanFlower/whale/releases/download/win-v1.7.1/whale-win.zip",
+    "sha256": "4bcd35c23e608ead122c841ffb664a6a3124681b03f975cb284f44d65ad49c1e",
+    "installerUrl": "https://github.com/CityNanFlower/whale/releases/download/win-v1.7.1/whale-setup.exe",
+    "installerSha256": "aa490c90a6e4cf573454d813d07a269d294c29ae179412d4c16a3e6bda698073",
+    "alignedAndroid": "0.3.0-alpha.2",
+    "notes": "本次更新：与 Android 0.3.0-alpha.2 同批——快捷键体系（键位可自定义、Ctrl+B 冲突消除、切页 Ctrl+1~5）、叙事设置改两段式、聊天背景按图适配主题、弹窗与输入框统一。"
   }
 }
