@@ -1,0 +1,173 @@
+{
+  "version": 3,
+  "updated": "2026-09-23",
+  "packs": [
+    {
+      "id": "theme-campus",
+      "title": "青春校园",
+      "tagline": "教室、天台、晚自习——同一段年纪里的四种走法",
+      "cover": "cover-theme-campus.jpg",
+      "cards": [
+        {
+          "id": "tongzhuo-luzhao",
+          "name": "陆昭",
+          "tagline": "高三同桌，嘴上说不管，作业本边缘全是他的铅笔批注",
+          "file": "card-tongzhuo-luzhao.png",
+          "thumb": "thumb-tongzhuo-luzhao.jpg",
+          "kind": "角色",
+          "form": "experience"
+        },
+        {
+          "id": "xiaokan-xiazhi",
+          "name": "夏栀",
+          "tagline": "校刊主编，只在放学后的空教室里改稿",
+          "file": "card-xiaokan-xiazhi.png",
+          "thumb": "thumb-xiaokan-xiazhi.jpg",
+          "kind": "角色",
+          "form": ""
+        },
+        {
+          "id": "wanxixi-tuili",
+          "name": "晚自习推理",
+          "tagline": "停电的四十分钟里，谁动过第三排的那个抽屉",
+          "file": "card-wanxixi-tuili.png",
+          "thumb": "thumb-wanxixi-tuili.jpg",
+          "kind": "角色",
+          "form": "play"
+        },
+        {
+          "id": "zuowen-pigai",
+          "name": "作文批改",
+          "tagline": "贴一篇作文，按老师标准给分数与逐条批注",
+          "file": "card-zuowen-pigai.png",
+          "thumb": "thumb-zuowen-pigai.jpg",
+          "kind": "角色",
+          "form": "tool"
+        }
+      ]
+    },
+    {
+      "id": "theme-jianghu",
+      "title": "古风江湖",
+      "tagline": "水乡的夜雨、一盏灯、一个说不出口的名字",
+      "cover": "cover-theme-jianghu.jpg",
+      "cards": [
+        {
+          "id": "banmian-shenqingwu",
+          "name": "沈青梧",
+          "tagline": "半面戴帷的游方女医，医人，也医心事",
+          "file": "card-banmian-shenqingwu.png",
+          "thumb": "thumb-banmian-shenqingwu.jpg",
+          "kind": "角色",
+          "form": ""
+        },
+        {
+          "id": "jianzong-lingshuang",
+          "name": "凌霜",
+          "tagline": "剑宗首徒，教你握剑，也教你别死在剑上",
+          "file": "card-jianzong-lingshuang.png",
+          "thumb": "thumb-jianzong-lingshuang.jpg",
+          "kind": "角色",
+          "form": "experience"
+        },
+        {
+          "id": "cairen-jianghu",
+          "name": "江湖猜人",
+          "tagline": "说书人心里藏着一个人，你只能靠问",
+          "file": "card-cairen-jianghu.png",
+          "thumb": "thumb-cairen-jianghu.jpg",
+          "kind": "角色",
+          "form": "play"
+        },
+        {
+          "id": "duiju-xiansheng",
+          "name": "对句先生",
+          "tagline": "出上联，给你几个下联和它对得上的地方",
+          "file": "card-duiju-xiansheng.png",
+          "thumb": "thumb-duiju-xiansheng.jpg",
+          "kind": "角色",
+          "form": "tool"
+        }
+      ]
+    },
+    {
+      "id": "theme-city",
+      "title": "都市夜话",
+      "tagline": "深夜还亮着的灯，和白天说不出口的话",
+      "cover": "cover-theme-city.jpg",
+      "cards": [
+        {
+          "id": "shiguang-linwantang",
+          "name": "林晚棠",
+          "tagline": "深夜书店的主理人，给晚归的人留一盏灯",
+          "file": "card-shiguang-linwantang.png",
+          "thumb": "thumb-shiguang-linwantang.jpg",
+          "kind": "角色",
+          "form": ""
+        },
+        {
+          "id": "bahe-baiqi",
+          "name": "白栖",
+          "tagline": "旧城事务所的年轻所长，能从一句话的停顿里听出谎",
+          "file": "card-bahe-baiqi.png",
+          "thumb": "thumb-bahe-baiqi.jpg",
+          "kind": "角色",
+          "form": "experience"
+        },
+        {
+          "id": "shenye-diantai",
+          "name": "深夜电台",
+          "tagline": "凌晨一点，你是热线那头唯一还在听的人",
+          "file": "card-shenye-diantai.png",
+          "thumb": "thumb-shenye-diantai.jpg",
+          "kind": "角色",
+          "form": "play"
+        },
+        {
+          "id": "qingxu-shuli",
+          "name": "情绪梳理",
+          "tagline": "把倒出来的一团话，理成三栏能看清的东西",
+          "file": "card-qingxu-shuli.png",
+          "thumb": "thumb-qingxu-shuli.jpg",
+          "kind": "角色",
+          "form": "tool"
+        }
+      ]
+    },
+    {
+      "id": "theme-wasteland",
+      "title": "星辰与废土",
+      "tagline": "星轨之下与沙尘之上，三种不同的活法",
+      "cover": "cover-theme-wasteland.jpg",
+      "cards": [
+        {
+          "id": "starfall-vila",
+          "name": "薇拉",
+          "tagline": "灯塔城天文台的见习占星师，信星星，也信你",
+          "file": "card-starfall-vila.png",
+          "thumb": "thumb-starfall-vila.jpg",
+          "kind": "角色",
+          "form": ""
+        },
+        {
+          "id": "albatross-dawn",
+          "name": "晨曦",
+          "tagline": "深空货船「信天翁号」的船载智能，独航第400天",
+          "file": "card-albatross-dawn.png",
+          "thumb": "thumb-albatross-dawn.jpg",
+          "kind": "角色",
+          "form": ""
+        },
+        {
+          "id": "nanfeng-diantai",
+          "name": "南风",
+          "tagline": "在没电的废土上修收音机，一边修，一边找人",
+          "file": "card-nanfeng-diantai.png",
+          "thumb": "thumb-nanfeng-diantai.jpg",
+          "kind": "角色",
+          "form": "experience"
+        }
+      ]
+    }
+  ]
+}
