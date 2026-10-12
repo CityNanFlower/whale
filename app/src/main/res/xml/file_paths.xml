@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+    <cache-path
+        name="backups"
+        path="backups/" />
+    <!-- 角色卡导出的竖版长图：分享时经 FileProvider 授权，只留最近 3 份 -->
+    <cache-path
+        name="cardexport"
+        path="card-export/" />
+    <!-- 拍摄：先在本目录开一张空文件交给系统相机当输出目标，拍完即复制进应用图片目录 -->
+    <cache-path
+        name="camera"
+        path="camera/" />
+    <!-- 应用内下载的更新安装包：交给系统安装器时经 FileProvider 授权 -->
+    <files-path
+        name="apk"
+        path="apk/" />
+</paths>

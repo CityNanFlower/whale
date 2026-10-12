@@ -1,0 +1,17 @@
+{
+  "versionCode": 27,
+  "versionName": "0.3.0-alpha.4",
+  "url": "https://github.com/CityNanFlower/whale/releases/download/v0.3.0-alpha.4/whale.apk",
+  "sha256": "dd0af54e60fd869cfbeb29b97744d04fe24382018ce5efbfb872801ad2307066",
+  "notes": "本次更新：会话「模型与思考强度」面板改完不再自动收起；灵感创作页可直接调思考强度；输出预算弹窗精简为两项旋钮。",
+  "windows": {
+    "versionCode": 16,
+    "versionName": "1.7.3",
+    "url": "https://github.com/CityNanFlower/whale/releases/download/win-v1.7.3/whale-win.zip",
+    "sha256": "d0018f9f52870b6f368200f4075654f621d4978aec942bd79ca19ef302848d3c",
+    "installerUrl": "https://github.com/CityNanFlower/whale/releases/download/win-v1.7.3/whale-setup.exe",
+    "installerSha256": "f7167e96ffa262fd21fc2e6a1f19f9133737beb1e9b9caeadf89e8e701b8d570",
+    "alignedAndroid": "0.3.0-alpha.4",
+    "notes": "本次更新：与 Android 0.3.0-alpha.4 同批——会话「模型与思考强度」面板改完不再自动收起；灵感创作页可直接调思考强度；输出预算弹窗精简为两项旋钮。"
+  }
+}
