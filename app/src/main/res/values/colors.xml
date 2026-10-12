@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 自适应图标的背景层：前景（ic_launcher_foreground）已把 72dp 可见区铺满，正常看不到这一层；
+         留蓝是给"前景被极度缩放/裁剪"的极端情况兜底，取值＝新母图卡片中段的蓝。 -->
+    <color name="ic_launcher_background">#425CA9</color>
+</resources>

@@ -1,0 +1,17 @@
+{
+  "versionCode": 26,
+  "versionName": "0.3.0-alpha.3",
+  "url": "https://github.com/CityNanFlower/whale/releases/download/v0.3.0-alpha.3/whale.apk",
+  "sha256": "d2dc59fb03cdb68e7e5c4c4b33887c10cf03a2ee85dd24fcb37140af7a8cc8dc",
+  "notes": "本次更新：模型答空自动重试（区分截断与漏答）、思考强度档位补齐＋滑杆控件、新增 OpenRouter / xAI / 小米 MiMo 三家供应商、默认台词为主的对话风格与短段落、聊天背景恢复原图直铺、用量热力图修复。",
+  "windows": {
+    "versionCode": 15,
+    "versionName": "1.7.2",
+    "url": "https://github.com/CityNanFlower/whale/releases/download/win-v1.7.2/whale-win.zip",
+    "sha256": "76fbdd71959d0bf43b225644c78bee565f4985ec8d2ca53d68ffb52f144a26c0",
+    "installerUrl": "https://github.com/CityNanFlower/whale/releases/download/win-v1.7.2/whale-setup.exe",
+    "installerSha256": "3f658b5574d8216228938f6039dae27f9989e61df593f067af0863d93004f95c",
+    "alignedAndroid": "0.3.0-alpha.3",
+    "notes": "本次更新：与 Android 0.3.0-alpha.3 同批——思考强度档位补齐＋滑杆控件、模型答空自动重试、新增三家供应商、默认台词为主的对话风格与短段落、聊天背景恢复原图直铺、用量热力图修复（滚轮与两侧箭头）。"
+  }
+}
