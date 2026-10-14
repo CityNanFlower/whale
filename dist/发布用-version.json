@@ -1,9 +1,9 @@
 {
-  "versionCode": 28,
-  "versionName": "0.3.1-alpha.1",
-  "url": "https://github.com/CityNanFlower/whale/releases/download/v0.3.1-alpha.1/whale.apk",
-  "sha256": "fa5631846f4c0659f3dc2f27b1b3d8ed1060fd3b81bb405d985cde0fcc96a2b0",
-  "notes": "本次更新：发现页改版（五栏分类＋角色四形态＋列表/柜格两视图）＋精选内容重做（33 张卡＋6 本世界书，写实向漫画配图）＋世界书可单独下载入书库；聊天页旁白观感重排；修复会话里换供应商后报「API key 格式不正确」。",
+  "versionCode": 29,
+  "versionName": "0.3.1-alpha.2",
+  "url": "https://github.com/CityNanFlower/whale/releases/download/v0.3.1-alpha.2/whale.apk",
+  "sha256": "0fb0621cb0ed7e1135e2923222161913fad71f2a54be1a823006d47caf0e6f45",
+  "notes": "本次更新：意见反馈多了两条路（GitHub 表单／飞书匿名），投稿上架后可撤回；修复发现页换封面后仍显示旧图、投稿单附件下载失败；旁白不再要求模型加标记。",
   "windows": {
     "versionCode": 17,
     "versionName": "1.8.0",
