@@ -1,0 +1,17 @@
+{
+  "versionCode": 29,
+  "versionName": "0.3.1-alpha.2",
+  "url": "https://github.com/CityNanFlower/whale/releases/download/v0.3.1-alpha.2/whale.apk",
+  "sha256": "0fb0621cb0ed7e1135e2923222161913fad71f2a54be1a823006d47caf0e6f45",
+  "notes": "本次更新：意见反馈多了两条路（GitHub 表单／飞书匿名），投稿上架后可撤回；修复发现页换封面后仍显示旧图、投稿单附件下载失败；旁白不再要求模型加标记。",
+  "windows": {
+    "versionCode": 18,
+    "versionName": "1.8.1",
+    "url": "https://github.com/CityNanFlower/whale/releases/download/win-v1.8.1/whale-win.zip",
+    "sha256": "b2b731aea888275fc229d8b0a14c2c29237837217cc86db8246a8e29bba7a37c",
+    "installerUrl": "https://github.com/CityNanFlower/whale/releases/download/win-v1.8.1/whale-setup.exe",
+    "installerSha256": "a4e3dcec574eb755b6d26a92d96567936ae3bfa116b0f3db9d1ecd9a6999d3b6",
+    "alignedAndroid": "0.3.1-alpha.2",
+    "notes": "本次更新：与 Android 0.3.1-alpha.2 同批——意见反馈多了两条路（GitHub 表单／飞书匿名），投稿上架后可撤回；修复 Esc 会跳过弹层直接退出底层页面、发现页换封面后仍显示旧图；旁白不再要求模型加标记。"
+  }
+}

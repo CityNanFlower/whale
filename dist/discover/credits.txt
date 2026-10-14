@@ -1,0 +1,65 @@
+鲸鱼 · 发现页精选内容 · 图源清单
+================================================================
+角色卡的**头像与背景**＝写实向漫画插画，**由 AI 生图（本机出图 · 火山方舟 seedream）**，不涉及第三方素材授权。
+  早期版本曾用 Pixabay 库存插画（Pixabay Content License）；第 91 轮已把全部角色卡特换成本机 AI 出图。
+分组**封面**＝本包首张卡的背景裁制（与卡图同源，不额外出图）。
+本文件随精选包生成时一并产出（改 CARD_META / 重新出图后重新生成即同步）。
+
+角色卡头像 / 背景（33 张卡，其中 33 张为 AI 出图）
+----------------------------------------------------------------
+青春校园
+  夏栀（陪伴）           AI 生成（本机出图 · seedream）
+  周聿（陪伴）           AI 生成（本机出图 · seedream）
+  陆昭（多线）           AI 生成（本机出图 · seedream）
+  晚自习推理（玩法）        AI 生成（本机出图 · seedream）
+  作文批改（工具）         AI 生成（本机出图 · seedream）
+  《青藤中学》（世界书）      book-campus.json
+古风江湖
+  沈青梧（陪伴）          AI 生成（本机出图 · seedream）
+  凌霜（多线）           AI 生成（本机出图 · seedream）
+  江湖猜人（玩法）         AI 生成（本机出图 · seedream）
+  对句先生（工具）         AI 生成（本机出图 · seedream）
+  《江湖门派志》（世界书）     book-jianghu.json
+都市夜话
+  林晚棠（陪伴）          AI 生成（本机出图 · seedream）
+  白栖（多线）           AI 生成（本机出图 · seedream）
+  深夜电台（玩法）         AI 生成（本机出图 · seedream）
+  情绪梳理（工具）         AI 生成（本机出图 · seedream）
+  《旧城：一条街的住户》（世界书） book-city.json
+星辰与废土
+  薇拉（陪伴）           AI 生成（本机出图 · seedream）
+  晨曦（陪伴）           AI 生成（本机出图 · seedream）
+  南风（多线）           AI 生成（本机出图 · seedream）
+  陌生呼号（玩法）         AI 生成（本机出图 · seedream）
+  废土配给（工具）         AI 生成（本机出图 · seedream）
+  《灯塔城与信天翁号》（世界书）  book-wasteland.json
+诡谈夜谭
+  沈砚（陪伴）           AI 生成（本机出图 · seedream）
+  顾长明（多线）          AI 生成（本机出图 · seedream）
+  回声宅邸（玩法）         AI 生成（本机出图 · seedream）
+  怪谈考据（工具）         AI 生成（本机出图 · seedream）
+  《雾港怪谈录》（世界书）     book-weird.json
+异界冒险
+  艾琳（陪伴）           AI 生成（本机出图 · seedream）
+  格里芬（多线）          AI 生成（本机出图 · seedream）
+  地宫拾遗（玩法）         AI 生成（本机出图 · seedream）
+  装备鉴定（工具）         AI 生成（本机出图 · seedream）
+  《阿瓦隆大陆》（世界书）     book-fantasy.json
+无主题
+  起名先生（工具）         AI 生成（本机出图 · seedream）
+  校对（工具）           AI 生成（本机出图 · seedream）
+  长文摘要（工具）         AI 生成（本机出图 · seedream）
+  灵感抽屉（工具）         AI 生成（本机出图 · seedream）
+  二十问（玩法）          AI 生成（本机出图 · seedream）
+  真心话（玩法）          AI 生成（本机出图 · seedream）
+  陪练（陪伴）           AI 生成（本机出图 · seedream）
+
+分组封面
+----------------------------------------------------------------
+  青春校园     theme-campus         本包首张卡背景裁制（与卡图同源）
+  古风江湖     theme-jianghu        本包首张卡背景裁制（与卡图同源）
+  都市夜话     theme-city           本包首张卡背景裁制（与卡图同源）
+  星辰与废土    theme-wasteland      本包首张卡背景裁制（与卡图同源）
+  诡谈夜谭     theme-weird          本包首张卡背景裁制（与卡图同源）
+  异界冒险     theme-fantasy        本包首张卡背景裁制（与卡图同源）
+  无主题      misc-general         本包首张卡背景裁制（与卡图同源）

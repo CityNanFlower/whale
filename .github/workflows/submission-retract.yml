@@ -1,0 +1,81 @@
+name: 投稿 · 下架
+
+# 「采用」的反向通道（2026-10-14 加）。维护者给单子打上 `下架`，就把这条内容从发现页撤掉：
+#   内容投稿 → 删 dist/discover/ 里的清单条目与文件（分组因此空了，连封面一起删）
+#   皮肤投稿 → 删 dist/skins/index.json 里的条目与 <id>.json
+# 然后提交推回 main，回帖、打 `已下架`、摘 `下架`、关单。
+#
+# ⚠ 下架只停掉**新的**分发：已经导入/套上的人撤不回来（本地优先的应用，文件早在他设备上）。
+# ⚠ 认出条目靠 标识 → `sub-<单号>` → 名称 三级；靠名称认出来时回帖里会写明（同名卡是有风险的）。
+on:
+  issues:
+    types: [labeled]
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  retract:
+    if: github.event.label.name == '下架'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: 内容投稿 · 下架（删清单条目 ＋ 删文件）
+        id: content
+        if: contains(github.event.issue.labels.*.name, '内容投稿')
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ISSUE_BODY: ${{ github.event.issue.body }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+        run: python .github/scripts/submission.py --retract
+
+      - name: 皮肤投稿 · 下架（删索引条目 ＋ 删包文件）
+        id: skin
+        if: contains(github.event.issue.labels.*.name, '皮肤投稿')
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ISSUE_BODY: ${{ github.event.issue.body }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+          ISSUE_AUTHOR: ${{ github.event.issue.user.login }}
+        run: python .github/scripts/skin_submission.py --retract
+
+      - name: 提交回 main
+        if: steps.content.outcome == 'success' || steps.skin.outcome == 'success'
+        env:
+          # 投稿标题是**外部输入**：只经 env 传给 shell，不拼进脚本正文（GitHub 的注入口径）
+          ISSUE_TITLE: ${{ github.event.issue.title }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+        run: |
+          git config user.name  "whale-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add dist/discover dist/skins
+          if git diff --cached --quiet; then
+            echo "没有文件变化，跳过提交。"
+            exit 0
+          fi
+          git commit -m "投稿下架（#$ISSUE_NUMBER）：$ISSUE_TITLE" -m "由「下架」标签触发；详情见 Issue #$ISSUE_NUMBER。"
+          git push
+
+      # 没找到就只回帖、不动标签（脚本自己判 result 文件在不在）
+      - name: 内容投稿 · 回帖 + 打标签 + 关单
+        if: always() && contains(github.event.issue.labels.*.name, '内容投稿')
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+        run: python .github/scripts/submission.py --finalize
+
+      - name: 皮肤投稿 · 回帖 + 打标签 + 关单
+        if: always() && contains(github.event.issue.labels.*.name, '皮肤投稿')
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+          ISSUE_AUTHOR: ${{ github.event.issue.user.login }}
+        run: python .github/scripts/skin_submission.py --finalize

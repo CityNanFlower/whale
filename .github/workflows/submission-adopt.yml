@@ -1,0 +1,83 @@
+name: 投稿 · 采用上架
+
+# 「点头」＝维护者给单子打上 `采用` 标签。打了之后按标签分流：
+#   内容投稿 → 文件落 dist/discover/、条目写进 discover-manifest.json
+#   皮肤投稿 → 包落 dist/skins/<id>.json、索引写进 dist/skins/index.json
+# 然后提交推回 main，回帖、打 `已上架`、摘 `采用`、关单。
+#
+# 上架的是**静态文件**（不是 API）：App 下次拉清单/索引即生效，不依赖任何在线服务。
+on:
+  issues:
+    types: [labeled]
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  adopt:
+    if: github.event.label.name == '采用'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: 装 Pillow（生成 224×224 缩略图；装不上就留空）
+        continue-on-error: true
+        run: python -m pip install --quiet pillow
+
+      - name: 内容投稿 · 落盘 + 写清单
+        id: content
+        if: contains(github.event.issue.labels.*.name, '内容投稿')
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ISSUE_BODY: ${{ github.event.issue.body }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+        run: python .github/scripts/submission.py --adopt
+
+      - name: 皮肤投稿 · 落盘 + 更新索引
+        id: skin
+        if: contains(github.event.issue.labels.*.name, '皮肤投稿')
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ISSUE_BODY: ${{ github.event.issue.body }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+          ISSUE_AUTHOR: ${{ github.event.issue.user.login }}
+        run: python .github/scripts/skin_submission.py --adopt
+
+      - name: 提交回 main
+        if: steps.content.outcome == 'success' || steps.skin.outcome == 'success'
+        env:
+          # 投稿标题是**外部输入**：只经 env 传给 shell，不拼进脚本正文（GitHub 的注入口径）
+          ISSUE_TITLE: ${{ github.event.issue.title }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+        run: |
+          git config user.name  "whale-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add dist/discover dist/skins
+          if git diff --cached --quiet; then
+            echo "没有文件变化，跳过提交。"
+            exit 0
+          fi
+          git commit -m "投稿上架（#$ISSUE_NUMBER）：$ISSUE_TITLE" -m "由「采用」标签触发；详情见 Issue #$ISSUE_NUMBER。"
+          git push
+
+      # 无论落盘成没成都要回帖；只有真落盘了才打「已上架」并关单（脚本自己判 result 文件在不在）
+      - name: 内容投稿 · 回帖 + 打标签 + 关单
+        if: always() && contains(github.event.issue.labels.*.name, '内容投稿')
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+        run: python .github/scripts/submission.py --finalize
+
+      - name: 皮肤投稿 · 回帖 + 打标签 + 关单
+        if: always() && contains(github.event.issue.labels.*.name, '皮肤投稿')
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+        run: python .github/scripts/skin_submission.py --finalize

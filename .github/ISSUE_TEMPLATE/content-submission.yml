@@ -1,0 +1,111 @@
+name: 内容投稿
+description: 投稿角色卡 / 世界书 / 故事，审过后进发现页精选（免费、离线可用）
+title: "[投稿] "
+labels: ["内容投稿"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        谢谢你愿意写东西给别人玩 🐳
+
+        提交后**几秒钟内会有一条校验评论**，告诉你还差什么。我对上了就在这单打一个 `采用` 标签，
+        文件和清单条目会自动提交进发现页——格式上的事不用你操心。
+
+        没有现成文件？先在鲸鱼 App 里把卡做好、导出 PNG，再拖到下面「文件」那一栏。
+  - type: dropdown
+    id: kind
+    attributes:
+      label: 投稿类型
+      description: 一次投一样；要投两样就开两张单。
+      options:
+        - 角色卡
+        - 世界书
+        - 故事
+    validations:
+      required: true
+  - type: dropdown
+    id: form
+    attributes:
+      label: 角色形态
+      description: 只对角色卡有用，其它类型选「不适用」。这是发现页「角色」栏目的分组轴。
+      options:
+        - 陪伴
+        - 多线
+        - 玩法
+        - 工具
+        - 不适用
+    validations:
+      required: true
+  - type: dropdown
+    id: theme
+    attributes:
+      label: 归属主题
+      description: 发现页按主题推荐，选一个最贴的。实在都不贴就选「其它」，我在评论里跟你确认。
+      options:
+        - 青春校园
+        - 古风江湖
+        - 都市夜话
+        - 星辰与废土
+        - 诡谈夜谭
+        - 异界冒险
+        - 其它
+    validations:
+      required: true
+  - type: input
+    id: name
+    attributes:
+      label: 名称
+      description: 卡片上显示的名字，24 字内。
+      placeholder: 陆昭
+    validations:
+      required: true
+  - type: input
+    id: tagline
+    attributes:
+      label: 一句话
+      description: 40 字内，会显示在卡片上（例：高三同桌，嘴上说不管，作业本边缘全是他的铅笔批注）。
+    validations:
+      required: true
+  - type: textarea
+    id: intro
+    attributes:
+      label: 内容简介
+      description: 3~5 句：它是什么、怎么玩、开场是什么局面。我会拿它写详情页。
+    validations:
+      required: true
+  - type: textarea
+    id: file
+    attributes:
+      label: 文件
+      description: |
+        角色卡＝PNG（鲸鱼/酒馆导出的那种，带 chara 数据）；世界书＝SillyTavern 世界书面板导出的 JSON。
+        **把文件拖进这一栏**即可；已经有公开直链（gist raw、你自己仓库的 raw）的话，直接把链接贴进来也一样。
+      placeholder: 把文件拖到这里，或贴一个公开直链…
+    validations:
+      required: true
+  - type: input
+    id: slug
+    attributes:
+      label: 标识（可选）
+      description: 英文小写短名，只用来做文件名和去重（例：tongzhuo-luzhao）。不填也行，我会按单号给你起一个。
+      placeholder: 留空即可
+    validations:
+      required: false
+  - type: textarea
+    id: notes
+    attributes:
+      label: 还想说的（可选）
+      description: 灵感来源、适配哪套笔法、希望我怎么介绍它……随便写。
+    validations:
+      required: false
+  - type: checkboxes
+    id: agree
+    attributes:
+      label: 合规确认
+      options:
+        - label: 内容是我原创的，或者我已获得原作者授权转投
+          required: true
+        - label: 不含违法内容、色情露骨内容、仇恨与真实个人隐私
+          required: true
+        - label: 同意以 CC BY 4.0 授权，随鲸鱼发现页免费分发给所有用户
+          required: true

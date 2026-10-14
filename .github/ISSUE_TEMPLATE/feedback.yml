@@ -1,0 +1,66 @@
+name: 问题反馈
+description: 报一个 bug、提一条建议或吐槽（题目与 App 内的匿名表单一致）
+title: "[反馈] "
+labels: ["问题反馈"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        谢谢你愿意花时间说一句 🐳
+
+        - 上面那一行**标题**写一句话概括就够了。
+        - **截图直接拖进下面「反馈内容」那一栏**，会自动传上来。
+        - 这里是**公开**页面：Key、账号、聊天原文里的隐私，贴之前请抹掉。
+        - App 里「版本与更新」页有**匿名的飞书表单**，题目一模一样——不想公开、也不想注册 GitHub 就走那条。
+
+        想让我们更快定位：把「版本与更新」页的**「异常记录」/「应用日志」复制过来**，比截图管用。
+  - type: dropdown
+    id: kind
+    attributes:
+      label: 类型
+      description: 拿不准就选「Bug」，选错了不影响处理。
+      options:
+        - Bug（有东西坏了）
+        - 建议（这样做会更好）
+        - 吐槽（用着不舒服）
+        - 新需求（想要一个现在没有的）
+    validations:
+      required: true
+  - type: textarea
+    id: detail
+    attributes:
+      label: 反馈内容
+      description: 请尽量写清楚：你做了什么、看到什么、期望什么。
+      placeholder: |
+        【你做了什么】
+
+        【看到什么】
+
+        【期望什么】
+    validations:
+      required: true
+  - type: dropdown
+    id: platform
+    attributes:
+      label: 平台（可选）
+      options:
+        - Android
+        - Windows
+        - 其他
+    validations:
+      required: false
+  - type: input
+    id: version
+    attributes:
+      label: 应用版本（可选）
+      description: 在 App 的「版本与更新」页能看到版本号。
+      placeholder: 例：0.3.0-alpha.4 ／ 1.7.3
+    validations:
+      required: false
+  - type: textarea
+    id: extra
+    attributes:
+      label: 还有什么想说的？（可选）
+      description: 灵感、吐槽、想让我们先修哪个……随便写。
+    validations:
+      required: false

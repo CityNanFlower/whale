@@ -1,0 +1,45 @@
+name: 投稿 · 收稿校验
+
+# 收到「内容投稿」或「皮肤投稿」单（或投稿人改了内容）就跑一遍，在单子里留一条**可更新的**校验评论：
+# 通过 → 写清"上架后会变成什么"；不通过 → 逐条说差什么。维护者不用做任何事。
+#
+# 两张表单选同一张 Issues 列表（2026-10-14 合并），这里按标签分流到对应脚本。
+on:
+  issues:
+    types: [opened, edited]
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  check:
+    if: contains(github.event.issue.labels.*.name, '内容投稿') || contains(github.event.issue.labels.*.name, '皮肤投稿')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: 装 Pillow（内容投稿的缩略图用；装不上也不影响校验）
+        continue-on-error: true
+        run: python -m pip install --quiet pillow
+
+      - name: 内容投稿 · 校验并回帖
+        if: contains(github.event.issue.labels.*.name, '内容投稿')
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ISSUE_BODY: ${{ github.event.issue.body }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+        run: python .github/scripts/submission.py --check --post
+
+      - name: 皮肤投稿 · 校验并回帖
+        if: contains(github.event.issue.labels.*.name, '皮肤投稿')
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ISSUE_BODY: ${{ github.event.issue.body }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+          ISSUE_AUTHOR: ${{ github.event.issue.user.login }}
+        run: python .github/scripts/skin_submission.py --check --post
