@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  调试包专用清单（与 app/src/main/AndroidManifest.xml 合并，release 不受影响）：
+  只为挂上「允许连本机假服务端」的网络安全配置，见 res/xml/network_security_config.xml。
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <application android:networkSecurityConfig="@xml/network_security_config" />
+</manifest>

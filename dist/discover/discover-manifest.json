@@ -1,0 +1,407 @@
+{
+  "version": 3,
+  "updated": "2026-10-14",
+  "packs": [
+    {
+      "id": "theme-campus",
+      "title": "青春校园",
+      "tagline": "教室、天台、晚自习——同一段年纪里的几种走法",
+      "cover": "cover-theme-campus.jpg",
+      "cards": [
+        {
+          "id": "xiaokan-xiazhi",
+          "name": "夏栀",
+          "tagline": "校刊主编，只在放学后的空教室改稿",
+          "file": "card-xiaokan-xiazhi.png",
+          "thumb": "thumb-xiaokan-xiazhi.jpg",
+          "kind": "角色",
+          "form": ""
+        },
+        {
+          "id": "zhouyu-faqiu",
+          "name": "周聿",
+          "tagline": "篮球队的万年替补，只在熄灯前一个人练罚球",
+          "file": "card-zhouyu-faqiu.png",
+          "thumb": "thumb-zhouyu-faqiu.jpg",
+          "kind": "角色",
+          "form": ""
+        },
+        {
+          "id": "tongzhuo-luzhao",
+          "name": "陆昭",
+          "tagline": "高三同桌，嘴上说不管，作业本边缘全是他的铅笔批注",
+          "file": "card-tongzhuo-luzhao.png",
+          "thumb": "thumb-tongzhuo-luzhao.jpg",
+          "kind": "角色",
+          "form": "experience"
+        },
+        {
+          "id": "wanxixi-tuili",
+          "name": "晚自习推理",
+          "tagline": "停电的四十分钟里，谁动过第三排的那个抽屉",
+          "file": "card-wanxixi-tuili.png",
+          "thumb": "thumb-wanxixi-tuili.jpg",
+          "kind": "角色",
+          "form": "play"
+        },
+        {
+          "id": "zuowen-pigai",
+          "name": "作文批改",
+          "tagline": "贴一篇作文，按老师标准给分数与逐条批注",
+          "file": "card-zuowen-pigai.png",
+          "thumb": "thumb-zuowen-pigai.jpg",
+          "kind": "角色",
+          "form": "tool"
+        },
+        {
+          "id": "book-campus",
+          "name": "《青藤中学》",
+          "tagline": "青春校园的世界设定 · 20 条，聊到就会自动带入",
+          "file": "book-campus.json",
+          "thumb": "",
+          "kind": "世界书"
+        }
+      ]
+    },
+    {
+      "id": "theme-jianghu",
+      "title": "古风江湖",
+      "tagline": "水乡的夜雨、一盏灯、一个说不出口的名字",
+      "cover": "cover-theme-jianghu.jpg",
+      "cards": [
+        {
+          "id": "banmian-shenqingwu",
+          "name": "沈青梧",
+          "tagline": "半面戴帷的游方女医，医人，也医心事",
+          "file": "card-banmian-shenqingwu.png",
+          "thumb": "thumb-banmian-shenqingwu.jpg",
+          "kind": "角色",
+          "form": ""
+        },
+        {
+          "id": "jianzong-lingshuang",
+          "name": "凌霜",
+          "tagline": "剑宗首徒，教你握剑，也教你别死在剑上",
+          "file": "card-jianzong-lingshuang.png",
+          "thumb": "thumb-jianzong-lingshuang.jpg",
+          "kind": "角色",
+          "form": "experience"
+        },
+        {
+          "id": "cairen-jianghu",
+          "name": "江湖猜人",
+          "tagline": "说书人心里藏着一个人，你只能靠问",
+          "file": "card-cairen-jianghu.png",
+          "thumb": "thumb-cairen-jianghu.jpg",
+          "kind": "角色",
+          "form": "play"
+        },
+        {
+          "id": "duiju-xiansheng",
+          "name": "对句先生",
+          "tagline": "出上联，给你几个下联和它对得上的地方",
+          "file": "card-duiju-xiansheng.png",
+          "thumb": "thumb-duiju-xiansheng.jpg",
+          "kind": "角色",
+          "form": "tool"
+        },
+        {
+          "id": "book-jianghu",
+          "name": "《江湖门派志》",
+          "tagline": "古风江湖的世界设定 · 20 条，聊到就会自动带入",
+          "file": "book-jianghu.json",
+          "thumb": "",
+          "kind": "世界书"
+        }
+      ]
+    },
+    {
+      "id": "theme-city",
+      "title": "都市夜话",
+      "tagline": "深夜还亮着的灯，和白天说不出口的话",
+      "cover": "cover-theme-city.jpg",
+      "cards": [
+        {
+          "id": "shiguang-linwantang",
+          "name": "林晚棠",
+          "tagline": "深夜书店的主理人，给晚归的人留一盏灯",
+          "file": "card-shiguang-linwantang.png",
+          "thumb": "thumb-shiguang-linwantang.jpg",
+          "kind": "角色",
+          "form": ""
+        },
+        {
+          "id": "bahe-baiqi",
+          "name": "白栖",
+          "tagline": "旧城事务所的年轻所长，能从一句话的停顿里听出谎",
+          "file": "card-bahe-baiqi.png",
+          "thumb": "thumb-bahe-baiqi.jpg",
+          "kind": "角色",
+          "form": "experience"
+        },
+        {
+          "id": "shenye-diantai",
+          "name": "深夜电台",
+          "tagline": "凌晨一点，你是热线那头唯一还在听的人",
+          "file": "card-shenye-diantai.png",
+          "thumb": "thumb-shenye-diantai.jpg",
+          "kind": "角色",
+          "form": "play"
+        },
+        {
+          "id": "qingxu-shuli",
+          "name": "情绪梳理",
+          "tagline": "把倒出来的一团话，理成三栏能看清的东西",
+          "file": "card-qingxu-shuli.png",
+          "thumb": "thumb-qingxu-shuli.jpg",
+          "kind": "角色",
+          "form": "tool"
+        },
+        {
+          "id": "book-city",
+          "name": "《旧城：一条街的住户》",
+          "tagline": "都市夜话的世界设定 · 20 条，聊到就会自动带入",
+          "file": "book-city.json",
+          "thumb": "",
+          "kind": "世界书"
+        }
+      ]
+    },
+    {
+      "id": "theme-wasteland",
+      "title": "星辰与废土",
+      "tagline": "星轨之下与沙尘之上，几种不同的活法",
+      "cover": "cover-theme-wasteland.jpg",
+      "cards": [
+        {
+          "id": "starfall-vila",
+          "name": "薇拉",
+          "tagline": "灯塔城天文台的见习占星师，信星星，也信你",
+          "file": "card-starfall-vila.png",
+          "thumb": "thumb-starfall-vila.jpg",
+          "kind": "角色",
+          "form": ""
+        },
+        {
+          "id": "albatross-dawn",
+          "name": "晨曦",
+          "tagline": "深空货船「信天翁号」的船载智能，独航第 400 天",
+          "file": "card-albatross-dawn.png",
+          "thumb": "thumb-albatross-dawn.jpg",
+          "kind": "角色",
+          "form": ""
+        },
+        {
+          "id": "nanfeng-diantai",
+          "name": "南风",
+          "tagline": "在没电的废土上修收音机，一边修，一边找人",
+          "file": "card-nanfeng-diantai.png",
+          "thumb": "thumb-nanfeng-diantai.jpg",
+          "kind": "角色",
+          "form": "experience"
+        },
+        {
+          "id": "mosheng-huhao",
+          "name": "陌生呼号",
+          "tagline": "沙尘暴的夜里，电台收到一个不该存在的呼号",
+          "file": "card-mosheng-huhao.png",
+          "thumb": "thumb-mosheng-huhao.jpg",
+          "kind": "角色",
+          "form": "play"
+        },
+        {
+          "id": "feitu-peiji",
+          "name": "废土配给",
+          "tagline": "把到手的物资按人数与天数，排成一份能执行的配给表",
+          "file": "card-feitu-peiji.png",
+          "thumb": "thumb-feitu-peiji.jpg",
+          "kind": "角色",
+          "form": "tool"
+        },
+        {
+          "id": "book-wasteland",
+          "name": "《灯塔城与信天翁号》",
+          "tagline": "星辰与废土的世界设定 · 20 条，聊到就会自动带入",
+          "file": "book-wasteland.json",
+          "thumb": "",
+          "kind": "世界书"
+        }
+      ]
+    },
+    {
+      "id": "theme-weird",
+      "title": "诡谈夜谭",
+      "tagline": "民国旧宅、雾港，和那些不能念出名字的东西",
+      "cover": "cover-theme-weird.jpg",
+      "cards": [
+        {
+          "id": "shenyan-guaitan",
+          "name": "沈砚",
+          "tagline": "旧宅的年轻管家，替你守着这栋不该有人住的房子",
+          "file": "card-shenyan-guaitan.png",
+          "thumb": "thumb-shenyan-guaitan.jpg",
+          "kind": "角色",
+          "form": ""
+        },
+        {
+          "id": "guchangming-wugang",
+          "name": "顾长明",
+          "tagline": "民国报馆的记者，专查\"登不了报\"的案子",
+          "file": "card-guchangming-wugang.png",
+          "thumb": "thumb-guchangming-wugang.jpg",
+          "kind": "角色",
+          "form": "experience"
+        },
+        {
+          "id": "huisheng-zhaidi",
+          "name": "回声宅邸",
+          "tagline": "一栋每晚十二点会重新排列房间的宅子",
+          "file": "card-huisheng-zhaidi.png",
+          "thumb": "thumb-huisheng-zhaidi.jpg",
+          "kind": "角色",
+          "form": "play"
+        },
+        {
+          "id": "guaitan-kaoju",
+          "name": "怪谈考据",
+          "tagline": "把你听来的怪谈，整理成能讲给别人听的完整版本",
+          "file": "card-guaitan-kaoju.png",
+          "thumb": "thumb-guaitan-kaoju.jpg",
+          "kind": "角色",
+          "form": "tool"
+        },
+        {
+          "id": "book-weird",
+          "name": "《雾港怪谈录》",
+          "tagline": "诡谈夜谭的世界设定 · 20 条，聊到就会自动带入",
+          "file": "book-weird.json",
+          "thumb": "",
+          "kind": "世界书"
+        }
+      ]
+    },
+    {
+      "id": "theme-fantasy",
+      "title": "异界冒险",
+      "tagline": "公会、遗迹，和那些还按旧规矩做事的落难者",
+      "cover": "cover-theme-fantasy.jpg",
+      "cards": [
+        {
+          "id": "ailin-mofa",
+          "name": "艾琳",
+          "tagline": "冒险者公会的柜台小姐，记得每个登记在册的名字，包括回不来的",
+          "file": "card-ailin-mofa.png",
+          "thumb": "thumb-ailin-mofa.jpg",
+          "kind": "角色",
+          "form": ""
+        },
+        {
+          "id": "geliefen-qishi",
+          "name": "格里芬",
+          "tagline": "失了主君的落难骑士，还在按旧规矩做事",
+          "file": "card-geliefen-qishi.png",
+          "thumb": "thumb-geliefen-qishi.jpg",
+          "kind": "角色",
+          "form": "experience"
+        },
+        {
+          "id": "digong-shiyi",
+          "name": "地宫拾遗",
+          "tagline": "一夜一层，把能带出来的都带出来",
+          "file": "card-digong-shiyi.png",
+          "thumb": "thumb-digong-shiyi.jpg",
+          "kind": "角色",
+          "form": "play"
+        },
+        {
+          "id": "zhuangbei-jianding",
+          "name": "装备鉴定",
+          "tagline": "贴一件东西，说出它的来历、品阶与值不值得留",
+          "file": "card-zhuangbei-jianding.png",
+          "thumb": "thumb-zhuangbei-jianding.jpg",
+          "kind": "角色",
+          "form": "tool"
+        },
+        {
+          "id": "book-fantasy",
+          "name": "《阿瓦隆大陆》",
+          "tagline": "异界冒险的世界设定 · 20 条，聊到就会自动带入",
+          "file": "book-fantasy.json",
+          "thumb": "",
+          "kind": "世界书"
+        }
+      ]
+    },
+    {
+      "id": "misc-general",
+      "title": "无主题",
+      "tagline": "不属任何题材的通用件，按类型直接出现在对应栏目",
+      "cover": "cover-misc-general.jpg",
+      "cards": [
+        {
+          "id": "qiming-xiansheng",
+          "name": "起名先生",
+          "tagline": "给角色、地名、招式、组织起名，一次给五个并说明理由",
+          "file": "card-qiming-xiansheng.png",
+          "thumb": "thumb-qiming-xiansheng.jpg",
+          "kind": "角色",
+          "form": "tool"
+        },
+        {
+          "id": "jiaodui",
+          "name": "校对",
+          "tagline": "贴一段文字，按错别字／病句／标点三类逐条改，只改不改写",
+          "file": "card-jiaodui.png",
+          "thumb": "thumb-jiaodui.jpg",
+          "kind": "角色",
+          "form": "tool"
+        },
+        {
+          "id": "changwen-zhaiyao",
+          "name": "长文摘要",
+          "tagline": "把一整篇长文压成一页：主旨、要点、可直接引用的话",
+          "file": "card-changwen-zhaiyao.png",
+          "thumb": "thumb-changwen-zhaiyao.jpg",
+          "kind": "角色",
+          "form": "tool"
+        },
+        {
+          "id": "lingan-chouti",
+          "name": "灵感抽屉",
+          "tagline": "卡壳时给你十个可选的下一步（只摆选项，不替你做决定）",
+          "file": "card-lingan-chouti.png",
+          "thumb": "thumb-lingan-chouti.jpg",
+          "kind": "角色",
+          "form": "tool"
+        },
+        {
+          "id": "ershiwen",
+          "name": "二十问",
+          "tagline": "经典机制：你问，我答是／否，猜出我心里那个东西",
+          "file": "card-ershiwen.png",
+          "thumb": "thumb-ershiwen.jpg",
+          "kind": "角色",
+          "form": "play"
+        },
+        {
+          "id": "zhenxinhua",
+          "name": "真心话",
+          "tagline": "一轮一问，答不上来就换个话题",
+          "file": "card-zhenxinhua.png",
+          "thumb": "thumb-zhenxinhua.jpg",
+          "kind": "角色",
+          "form": "play"
+        },
+        {
+          "id": "peilian",
+          "name": "陪练",
+          "tagline": "一个陪你把某段关系\"先对一遍戏\"的练习搭子",
+          "file": "card-peilian.png",
+          "thumb": "thumb-peilian.jpg",
+          "kind": "角色",
+          "form": ""
+        }
+      ]
+    }
+  ]
+}

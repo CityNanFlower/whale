@@ -1,0 +1,11 @@
+blank_issues_enabled: true
+contact_links:
+  - name: 📮 投稿说明（怎么投、格式与命名约定）
+    url: https://github.com/CityNanFlower/whale/blob/main/.github/SUBMISSION.md
+    about: 内容与皮肤怎么投、清单字段与命名约定、标签含义——先看这份。
+  - name: 📖 使用手册
+    url: https://github.com/CityNanFlower/whale/blob/main/shared/assets/manual/manual.md
+    about: 一分钟上手、key 怎么填、换模型、数据在哪——看使用手册。
+  - name: 🕶 匿名反馈（不用账号、不公开）
+    url: https://ncnsnhd97qtl.feishu.cn/share/base/shrcnSLW2NhCHINp7tsP88tYUWb
+    about: 和上面的「问题反馈」表单题目一样，但填完只有我们看得到。App 的「版本与更新」页里也有这个入口。

@@ -1,0 +1,17 @@
+{
+  "versionCode": 28,
+  "versionName": "0.3.1-alpha.1",
+  "url": "https://github.com/CityNanFlower/whale/releases/download/v0.3.1-alpha.1/whale.apk",
+  "sha256": "fa5631846f4c0659f3dc2f27b1b3d8ed1060fd3b81bb405d985cde0fcc96a2b0",
+  "notes": "本次更新：发现页改版（五栏分类＋角色四形态＋列表/柜格两视图）＋精选内容重做（33 张卡＋6 本世界书，写实向漫画配图）＋世界书可单独下载入书库；聊天页旁白观感重排；修复会话里换供应商后报「API key 格式不正确」。",
+  "windows": {
+    "versionCode": 17,
+    "versionName": "1.8.0",
+    "url": "https://github.com/CityNanFlower/whale/releases/download/win-v1.8.0/whale-win.zip",
+    "sha256": "1defad674c8cb09976d71f8629d25accdbdf275e6ba68864e91311bfa6100bab",
+    "installerUrl": "https://github.com/CityNanFlower/whale/releases/download/win-v1.8.0/whale-setup.exe",
+    "installerSha256": "f29bbbbb7e7e775af582c66f183e9a9ff5f8c2d0a54f432a47b6f863547e135b",
+    "alignedAndroid": "0.3.1-alpha.1",
+    "notes": "本次更新：与 Android 0.3.1-alpha.1 同批——发现页改版（五栏分类＋角色四形态＋列表/柜格）＋精选内容重做（33 张卡＋6 本世界书，写实向漫画配图）＋世界书可单独下载入书库；旁白观感重排；修复会话换供应商报 key 格式错误。"
+  }
+}
