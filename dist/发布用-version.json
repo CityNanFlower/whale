@@ -1,9 +1,9 @@
 {
-  "versionCode": 27,
-  "versionName": "0.3.0-alpha.4",
-  "url": "https://github.com/CityNanFlower/whale/releases/download/v0.3.0-alpha.4/whale.apk",
-  "sha256": "dd0af54e60fd869cfbeb29b97744d04fe24382018ce5efbfb872801ad2307066",
-  "notes": "本次更新：会话「模型与思考强度」面板改完不再自动收起；灵感创作页可直接调思考强度；输出预算弹窗精简为两项旋钮。",
+  "versionCode": 28,
+  "versionName": "0.3.1-alpha.1",
+  "url": "https://github.com/CityNanFlower/whale/releases/download/v0.3.1-alpha.1/whale.apk",
+  "sha256": "fa5631846f4c0659f3dc2f27b1b3d8ed1060fd3b81bb405d985cde0fcc96a2b0",
+  "notes": "本次更新：发现页改版（五栏分类＋角色四形态＋列表/柜格两视图）＋精选内容重做（33 张卡＋6 本世界书，写实向漫画配图）＋世界书可单独下载入书库；聊天页旁白观感重排；修复会话里换供应商后报「API key 格式不正确」。",
   "windows": {
     "versionCode": 16,
     "versionName": "1.7.3",
